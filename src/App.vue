@@ -42,11 +42,11 @@ export default {
           },
         ]
       },
-      apiKeyFront: "test_IXVJCTDD3RBFZFAT2LW57ZUUSQJWR2H4",
+      apiKeyFront: "YOUR CLIENT KEY",
     };
     const adyenConfig = {
       paymentMethodsResponse: json.paymentData,
-      clientKey: "test_IXVJCTDD3RBFZFAT2LW57ZUUSQJWR2H4",
+      clientKey: "YOUR CLIENT KEY",
       showPayButton: true,
       locale: "es-ES",
       environment: "test",
