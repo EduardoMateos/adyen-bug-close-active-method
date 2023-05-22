@@ -2,7 +2,7 @@
   <div id="app">
     <div>Adyen dropin:</div>
     <div ref="dropin"></div>
-    <button @click="dropin.closeActivePaymentMethod()">
+    <button @click="variableRandom.closeActivePaymentMethod()">
       Close active methods
     </button>
   </div>
@@ -15,7 +15,7 @@ export default {
   name: "App",
   data() {
     return {
-      dropin: null,
+      variableRandom: null,
     }
   },
   async created() {
@@ -35,7 +35,7 @@ export default {
           {
             configuration: {
               merchantId: "50",
-              gatewayMerchantId: "FutbolFactoryECOM",
+              gatewayMerchantId: "TESTECOM",
             },
             name: "Google Pay",
             type: "paywithgoogle",
@@ -67,7 +67,7 @@ export default {
     };
 
     const adyenCheckout = await AdyenCheckout(adyenConfig);
-    this.dropin = adyenCheckout.create("dropin").mount(this.$refs.dropin);
+    this.variableRandom = adyenCheckout.create("dropin").mount(this.$refs.dropin);
   },
 };
 </script>
